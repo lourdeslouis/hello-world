@@ -12,10 +12,14 @@ jobs:
         run: |
           node -v
           npm -v
+  run-dependent-job:
+    runs-on: windows-latest
+    needs: ["run-hello-world"]
+    steps:
       - name: python Commands
         run: |
           import platform
           print(platform.processor())
-        shell: python
+        shell: python 
 
       
