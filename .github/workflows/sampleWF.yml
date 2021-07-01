@@ -1,1 +1,16 @@
 name: SampleWorkflow Shell Commands
+
+on: [push]
+
+jobs: 
+  run-hello-world:
+    runs-on: windows-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World Workflow"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+
+      
