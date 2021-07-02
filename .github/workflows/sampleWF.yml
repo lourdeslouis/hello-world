@@ -1,10 +1,10 @@
 name: SampleWorkflow Shell Commands
 
-#on: [push]
-on: 
-  schedule: 
-    - cron: "0/5 * * * *"
-    - cron: "0/6 * * * *"
+on: [push]
+#on: 
+ # schedule: 
+  #  - cron: "0/5 * * * *"
+   # - cron: "0/6 * * * *"
 jobs: 
   run-hello-world:
     runs-on: windows-latest
